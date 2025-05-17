@@ -6,6 +6,16 @@ public class Gravity : MonoBehaviour
   public float targetGravity = 9.81f;
   public float targetDrag = 1f;
 
+  public GameObject gravityField;
+
+  void Awake()
+  {
+    double spriteRadius = this.gameObject.GetComponent<CircleCollider2D>().radius;
+
+    if (gravityField)
+      gravityField.transform.localScale = new Vector3((float)spriteRadius * 2, (float)spriteRadius * 2, 1);
+  }
+
   void OnTriggerStay2D(Collider2D collision)
   {
     Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();

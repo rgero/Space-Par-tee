@@ -1,10 +1,18 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float targetForce = 5f;
-    void Start()
+
+    public bool hasFired = false;
+
+    void Update()
     {
-        this.GetComponent<Rigidbody2D>().AddForce(Vector2.right * targetForce, ForceMode2D.Impulse);
+        if (Input.GetMouseButtonDown(1) && !hasFired)
+        {
+            hasFired = true;
+            this.GetComponent<Rigidbody2D>().AddForce(Vector2.right * targetForce, ForceMode2D.Impulse);
+        }
     }
 }
