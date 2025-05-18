@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4432381262905305572}
   m_Layer: 22
   m_Name: BlackHole
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetGravity: 40
   targetDrag: 0.1
+  gravityField: {fileID: 0}
 --- !u!50 &7646458086817148131
 Rigidbody2D:
   serializedVersion: 5

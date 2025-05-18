@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BluePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 2019406613638234440, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 3073980943714538116, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
       propertyPath: targetDrag
       value: 1

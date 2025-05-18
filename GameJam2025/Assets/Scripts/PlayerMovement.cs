@@ -7,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool hasFired = false;
 
-    void Update()
+    public void Fire()
     {
-        if (Input.GetMouseButtonDown(1) && !hasFired)
+        if (!hasFired)
         {
             hasFired = true;
             this.GetComponent<Rigidbody2D>().AddForce(Vector2.right * targetForce, ForceMode2D.Impulse);
