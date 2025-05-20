@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: targetGravity
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4588861128259618106, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 8611077427693441013, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
       propertyPath: m_Color.b
       value: 1
