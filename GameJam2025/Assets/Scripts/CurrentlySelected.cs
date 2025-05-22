@@ -4,9 +4,14 @@ using UnityEngine.UI;
 
 public class CurrentlySelected : MonoBehaviour
 {
-    private Sprite targetSprite;
+    private GameObject selectionBox;
+    public int planetIndex;
+
     void Start()
     {
+        this.gameObject.GetComponent<Button>().onClick.AddListener(() => SelectionSystem.Instance.SetSelectedPlanet(planetIndex));
+
+        selectionBox = gameObject.transform.GetChild(0).gameObject;
         SelectionSystem.Instance.OnSelectionChange += HandleSelectionChange;
         GetSprite();
     }
@@ -21,11 +26,14 @@ public class CurrentlySelected : MonoBehaviour
         GameObject selectedPlanet = SelectionSystem.Instance.GetSelectedPlanet();
         if (selectedPlanet != null)
         {
-            targetSprite = selectedPlanet.GetComponent<SpriteRenderer>().sprite;
-            Image image = GetComponent<Image>();
-            image.sprite = targetSprite;
-            image.color = selectedPlanet.GetComponent<SpriteRenderer>().color;
-            Debug.Log("Currently selected planet: " + selectedPlanet.name);
+            if (selectedPlanet.gameObject.name == gameObject.name)
+            {
+                selectionBox.SetActive(true);
+            }
+            else
+            {
+                selectionBox.SetActive(false);
+            }
         }
     }
 }

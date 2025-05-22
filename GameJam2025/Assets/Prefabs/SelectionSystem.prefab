@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedPlanet: {fileID: 7068614332307155148, guid: d40f38cbe5a208d419e2e8bd2c8c18c5, type: 3}
   planets:
-  - {fileID: 5750807658107328156, guid: 5e32eed65fbfa3e479a6ea251938a77c, type: 3}
   - {fileID: 8260360543176274231, guid: 00e892a9330fc9048bb60ab9efc81d83, type: 3}
+  - {fileID: 5750807658107328156, guid: 5e32eed65fbfa3e479a6ea251938a77c, type: 3}
   - {fileID: 7068614332307155148, guid: d40f38cbe5a208d419e2e8bd2c8c18c5, type: 3}
   - {fileID: 4620404013474735682, guid: 6881c9528dd8a424eaa46ecd8484a30d, type: 3}
   - {fileID: 7213560874761142789, guid: 231f43a08612174438b2e2214316742a, type: 3}

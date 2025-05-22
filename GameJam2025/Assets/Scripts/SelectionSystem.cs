@@ -14,11 +14,12 @@ public class SelectionSystem : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("There's more than one TurnSystem! " + transform + " - " + Instance);
+            Debug.LogError("There's more than one SelectionSystem! " + transform + " - " + Instance);
             Destroy(gameObject);
             return;
         }
         Instance = this;
+        selectedPlanet = planets[2]; // Default Selection is Earth
     }
 
     public void SetSelectedPlanet(int prefabIndex)

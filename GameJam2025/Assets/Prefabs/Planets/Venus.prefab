@@ -64,6 +64,18 @@ PrefabInstance:
       propertyPath: targetGravity
       value: 8.87
       objectReference: {fileID: 0}
+    - target: {fileID: 8611077427693441013, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611077427693441013, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611077427693441013, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9568628
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

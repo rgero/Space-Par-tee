@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -961797162777624633, guid: 1811bbadb4969424788a6c979b942d7a, type: 3}
+      propertyPath: planetIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1389499691076454961, guid: 1811bbadb4969424788a6c979b942d7a, type: 3}
       propertyPath: m_Name
       value: Mars
