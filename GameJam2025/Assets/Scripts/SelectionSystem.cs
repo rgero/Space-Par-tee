@@ -19,7 +19,6 @@ public class SelectionSystem : MonoBehaviour
             return;
         }
         Instance = this;
-        selectedPlanet = planets[0];
     }
 
     public void SetSelectedPlanet(int prefabIndex)

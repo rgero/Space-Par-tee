@@ -22,8 +22,8 @@ public class CurrentlySelected : MonoBehaviour
         if (selectedPlanet != null)
         {
             targetSprite = selectedPlanet.GetComponent<SpriteRenderer>().sprite;
-            RawImage image = GetComponent<RawImage>();
-            image.texture = targetSprite.texture;
+            Image image = GetComponent<Image>();
+            image.sprite = targetSprite;
             image.color = selectedPlanet.GetComponent<SpriteRenderer>().color;
             Debug.Log("Currently selected planet: " + selectedPlanet.name);
         }
