@@ -27,4 +27,9 @@ public class LevelManager : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
