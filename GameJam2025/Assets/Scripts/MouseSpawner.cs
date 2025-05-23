@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class MouseSpawner : MonoBehaviour
 {
     public GameObject planetToSpawn;
+    public float clickCooldown = 0.5f;
+    private float lastClickTime = 0f;
 
     public Transform parentHolder;
 
@@ -21,29 +23,37 @@ public class MouseSpawner : MonoBehaviour
 
     void Update()
     {
-        if (IsPointerOverUI())
-            return;
+        lastClickTime += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        bool isCooldown = lastClickTime < clickCooldown;
+
+        if (Input.GetMouseButtonDown(0))
         {
+            if (IsPointerOverUI())
+                return;
+
+            if (isCooldown)
+                return;
+
             if (IsPlanetThere())
                 return;
 
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(planetToSpawn, worldPosition, Quaternion.identity, parentHolder);
+
+            lastClickTime = 0f;
         }
 
         // Destroy planet if it is there
         if (Input.GetMouseButtonDown(1))
         {
-            // Check to see if there's something already there
-            GameObject planet = IsPlanetThere();
+            GameObject planet = GetPlanetUnderMouse();
             if (planet != null)
             {
                 Debug.Log("Destroying planet.");
                 Destroy(planet);
             }
-        } 
+        }
     }
 
     private bool IsPointerOverUI()
@@ -51,18 +61,25 @@ public class MouseSpawner : MonoBehaviour
         return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
     }
 
-    private GameObject IsPlanetThere()
+    private bool IsPlanetThere()
     {
-        // Check to see if there's something already there
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hit.collider != null)
+        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D hit = Physics2D.OverlapPoint(worldPoint);
+        if (hit != null && hit.CompareTag("PlanetGravity"))
         {
-            // If the object is not null and has a tag, return
-            if (hit.collider.gameObject.CompareTag("Planet"))
-            {
-                Debug.Log("Hit a planet, not spawning.");
-                return hit.collider.gameObject;
-            }
+            Debug.Log("Hit a planet, not spawning.");
+            return true;
+        }
+        return false;
+    }
+    
+    private GameObject GetPlanetUnderMouse()
+    {
+        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D hit = Physics2D.OverlapPoint(worldPoint);
+        if (hit != null && hit.CompareTag("Planet"))
+        {
+            return hit.gameObject;
         }
         return null;
     }
