@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8611077427693441013}
   - component: {fileID: 3596765052788156708}
   - component: {fileID: 4432381262905305572}
+  - component: {fileID: 4566745558213569204}
   m_Layer: 22
   m_Name: BlackHole
   m_TagString: Planet
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -7564997713910450843, guid: 36ab7b6262e794b4783cfaf0a5cbc54d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,6 +154,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4566745558213569204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019406613638234440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cbbc4bdb9ad0f543b7dd41ad25cb4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: GameOver
 --- !u!1 &4588861128259618106
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +236,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 4.2
+  m_Radius: 5
 --- !u!114 &3073980943714538116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetGravity: 40
-  targetDrag: 0.1
+  targetDrag: 10
   gravityField: {fileID: 0}
 --- !u!50 &7646458086817148131
 Rigidbody2D:

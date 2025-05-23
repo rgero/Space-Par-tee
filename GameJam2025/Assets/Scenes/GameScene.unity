@@ -602,11 +602,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1167924355151492940, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22
+      value: 23.5
       objectReference: {fileID: 0}
     - target: {fileID: 1167924355151492940, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.41
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 1167924355151492940, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
       propertyPath: m_LocalPosition.z
@@ -640,44 +640,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1502318611053179877, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
-      propertyPath: m_Radius
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2019406613638234440, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
-    - target: {fileID: 8611077427693441013, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
+    - target: {fileID: 3073980943714538116, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
+      propertyPath: targetDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073980943714538116, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
+      propertyPath: targetGravity
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2019406613638234440, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 306087006}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
---- !u!1 &306087005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2019406613638234440, guid: 298ec0a914dd7bb42974ff8a4343d389, type: 3}
-  m_PrefabInstance: {fileID: 306087004}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &306087006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306087005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cbbc4bdb9ad0f543b7dd41ad25cb4a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextLevelName: GameOver
 --- !u!1001 &338126452
 PrefabInstance:
   m_ObjectHideFlags: 0

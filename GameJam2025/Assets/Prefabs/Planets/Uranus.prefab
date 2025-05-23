@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073980943714538116, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
       propertyPath: targetDrag
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3073980943714538116, guid: 9f609309ca3fccd45a3c4f6a36a8ee94, type: 3}
       propertyPath: targetGravity
