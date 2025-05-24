@@ -5,7 +5,7 @@ public class StartGame : MonoBehaviour
 {
     void Start()
     {
-        this.gameObject.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel("GameScene"));
+        this.gameObject.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel("Level_01"));
     }
 
 }
