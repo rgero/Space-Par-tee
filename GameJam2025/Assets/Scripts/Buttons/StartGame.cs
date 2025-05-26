@@ -3,10 +3,15 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
-    void Start()
+    void StartNewGame()
     {
         StatSystem.Instance.ResetScore();
-        this.gameObject.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel("Level_01"));
+        LevelManager.Instance.LoadLevel("Level_01");
+    }
+
+    void Awake()
+    {
+        this.gameObject.GetComponent<Button>().onClick.AddListener(StartNewGame);
     }
 
 }
