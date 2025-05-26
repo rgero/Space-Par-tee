@@ -24,6 +24,7 @@ public class Ball : MonoBehaviour
         if (!hasFired)
         {
             hasFired = true;
+            this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             this.GetComponent<Rigidbody2D>().AddForce(Vector2.right * targetForce, ForceMode2D.Impulse);
         }
     }
