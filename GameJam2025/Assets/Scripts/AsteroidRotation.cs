@@ -3,7 +3,7 @@ using UnityEngine;
 public class AsteroidRotation : MonoBehaviour
 {
     public float rotationSpeed = 0.0f;
-    public float rotationSpeedMin = 0.0f;
+    public float rotationSpeedMin = 5.0f;
     public float rotationSpeedMax = 30.0f;
     public bool rotationDirection = true;
 
