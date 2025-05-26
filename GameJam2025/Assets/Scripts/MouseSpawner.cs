@@ -41,6 +41,8 @@ public class MouseSpawner : MonoBehaviour
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(planetToSpawn, worldPosition, Quaternion.identity, parentHolder);
 
+            StatSystem.Instance.AddPlanet();
+
             lastClickTime = 0f;
         }
 
@@ -51,6 +53,7 @@ public class MouseSpawner : MonoBehaviour
             if (planet != null)
             {
                 Debug.Log("Destroying planet.");
+                StatSystem.Instance.RemovePlanet();
                 Destroy(planet);
             }
         }
