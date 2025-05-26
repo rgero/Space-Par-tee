@@ -52,7 +52,6 @@ public class MouseSpawner : MonoBehaviour
             GameObject planet = GetPlanetUnderMouse();
             if (planet != null)
             {
-                Debug.Log("Destroying planet.");
                 StatSystem.Instance.RemovePlanet();
                 Destroy(planet);
             }
@@ -75,14 +74,18 @@ public class MouseSpawner : MonoBehaviour
         }
         return false;
     }
-    
+
     private GameObject GetPlanetUnderMouse()
     {
-        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D hit = Physics2D.OverlapPoint(worldPoint);
-        if (hit != null && hit.CompareTag("Planet"))
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos, Vector2.zero);
+
+        foreach(RaycastHit2D hit in hits)
         {
-            return hit.gameObject;
+            if (hit.collider != null && hit.collider.CompareTag("Planet"))
+            {
+                return hit.collider.gameObject;
+            }
         }
         return null;
     }
