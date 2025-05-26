@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
     public static Ball Instance { get; private set; }
     public float targetForce = 5f;
     public bool hasFired = false;
+    public GameObject movementContainer;
 
     void Awake()
     {
@@ -17,6 +18,7 @@ public class Ball : MonoBehaviour
         }
         Instance = this;
         hasFired = false;
+        movementContainer.SetActive(true);
     }
 
     public void Fire()
@@ -25,7 +27,13 @@ public class Ball : MonoBehaviour
         {
             hasFired = true;
             this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            this.GetComponent<Rigidbody2D>().AddForce(Vector2.right * targetForce, ForceMode2D.Impulse);
+
+            float zRotation = transform.eulerAngles.z;
+            float radians = zRotation * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
+
+            this.GetComponent<Rigidbody2D>().AddForce(direction * targetForce, ForceMode2D.Impulse);
+            movementContainer.SetActive(false);
         }
     }
 }
