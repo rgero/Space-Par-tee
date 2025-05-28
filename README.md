@@ -17,3 +17,6 @@ As part of the GameDev.tv Game Jam for 2025. The theme was Tiny World. While the
 		 - Space Explorers
 - Font
 	- [Space by Ibram Syah](https://www.dafont.com/space-3.font)
+
+## Store Page
+The store page to check out the project is - https://roymond.itch.io/space-par-tee
