@@ -20,3 +20,4 @@ As part of the GameDev.tv Game Jam for 2025. The theme was Tiny World. While the
 
 ## Store Page
 The store page to check out the project is - https://roymond.itch.io/space-par-tee
+You don't have to pay for it and I intend on making a web release that can be uploaded to the site.
